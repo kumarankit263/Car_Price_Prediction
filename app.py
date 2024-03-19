@@ -31,9 +31,8 @@ if st.button('Predict Price'):
     # You may need to encode categorical variables and scale numerical features here based on your preprocessing steps
 
     # Create query array
-    query = np.array([name, company, year, kms_driven, fuel_type])
-    query_df = pd.DataFrame([query], columns=['name', 'company', 'year', 'kms_driven', 'fuel_type'])
-
+    query = np.array([[name, company, year, kms_driven, fuel_type]])
+    query_df = pd.DataFrame(query, columns=['name', 'company', 'year', 'kms_driven', 'fuel_type'])
 
     # Assuming you have preprocessing steps to transform the query data similar to how it was done during training
     # You might need to encode categorical variables and scale numerical features accordingly
